@@ -9,12 +9,12 @@ const CardMovie=({el})=>{
                 <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={el.posterURL} style={{width:"286px",height:"406px"}}/>
                 <Card.Body>
-                <Card.Title>{el.title}</Card.Title>
+                <Card.Title><Link to={`/trailer/${el.id}`} >{el.title} </Link></Card.Title>
                 <Card.Text>
                 {el.description}
         </Card.Text>
         <Card.Text> <h3>Trailer : </h3>
-             <Link to={`trailer/${el.id}`} >{el.trailer}</Link>
+            
         </Card.Text>
         <Typography component="legend"></Typography>
       <Rating name="read-only" value={el.rating} readOnly />

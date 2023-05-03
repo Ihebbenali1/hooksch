@@ -1,6 +1,7 @@
 import CardMovie from "./CardMovie"
 
 const ListMovie=({movies,search})=>{
+    console.log("List CCOM",movies)
     return(
         <div className='cards'>
             {
