@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import { Link } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import Card from 'react-bootstrap/Card';
@@ -12,6 +12,9 @@ const CardMovie=({el})=>{
                 <Card.Title>{el.title}</Card.Title>
                 <Card.Text>
                 {el.description}
+        </Card.Text>
+        <Card.Text> <h3>Trailer : </h3>
+             <Link to={`trailer/${el.id}`} >{el.trailer}</Link>
         </Card.Text>
         <Typography component="legend"></Typography>
       <Rating name="read-only" value={el.rating} readOnly />
